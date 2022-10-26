@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>cal</title>
+<style>
+#button{
+height:100%;
+width:100%;
+}
+.display
+{
+height:100%;
+width:100%;
+}
+</style>
+</head>
+<body>
+<script src="../js/calc.js"></script>
+<table align="center" border="2px" height="40%" width="20%">
+<tr>
+<td colspan="5">
+<input type="text" class="display" placeholder="0" id="result"/>
+</td>
+</tr>
+<tr align="center">
+<td><input type="button" id="button" value="(" onclick="display('(')"/>
+</td>
+<td><input type="button" id="button" value="CE" onclick="remove()"/></td>
+<td><input type="button" id="button" value=")" onclick="display(')')"/></td>
+<td><input type="button" id="button" value="c" onclick="clears()"/></td>
+</tr>
+<tr>
+1 same onclick="display('1')"/>
+2
+3
++
+</tr>
+<tr>
+4
+5
+6
+-
+</tr>
+<tr>
+7
+8
+9
+*
+</tr>
+.
+0
+=
+/
+</tr>
+</table>
+</body>
+</html>
+
+cal.js
+function display(value)
+{
+document.getElementById("result").value+=value;
+}
+function clears()
+{
+document.getElementById("result").value+="";
+}
+fuction calculate(){
+var x=document.getElementById("result").value;
+var ans=eval(x);
+document.getElementById("result").value=ans;
+}
+function remove()
+{
+
+var arr=document.getElementById("result").value;
+var newarr=arr.slice(0,-1);
+document.getElementId("result").value=newarr;
+}
+
+
